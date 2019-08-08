@@ -17,6 +17,8 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  permission_handler: ^3.2.1+1
+  overlay_support: ^1.0.0
   flutter:
     sdk: flutter
 
