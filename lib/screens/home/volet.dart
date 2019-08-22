@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projet_1cs/screens/selectLocation/selectLocation.dart';
 
 class Volet extends StatelessWidget{
   var icon_name= new  Icon( Icons.add_location,  );
@@ -16,9 +17,7 @@ class Volet extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-
-
+    
     var width_=MediaQuery.of(context).size.width;
     var height_=MediaQuery.of(context).size.height;
     return new Container(
@@ -50,7 +49,11 @@ class Volet extends StatelessWidget{
                     padding: new EdgeInsets.all(0.0),
                     color:Color.fromRGBO(255, 255, 255, 1),
                     iconSize: 40,
-                    onPressed: null)
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => appGPS()));
+                    })
 
 
 
