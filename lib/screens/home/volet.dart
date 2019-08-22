@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:projet_1cs/screens/formulaire/formulaire.dart';
 class Volet extends StatelessWidget{
   var icon_name= new  Icon( Icons.add_location,  );
   var oval_color=Color.fromRGBO(246, 142, 79, 0.05);
   var border_color=Color.fromRGBO(246, 142, 79, 0.8);
   var text_content= "Qualité de l'air en temps réel";
+  Function route = () => Formulaire();
   
   Volet(
 
@@ -50,7 +51,12 @@ class Volet extends StatelessWidget{
                     padding: new EdgeInsets.all(0.0),
                     color:Color.fromRGBO(255, 255, 255, 1),
                     iconSize: 40,
-                    onPressed: null)
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => route()),
+                        );
+                    })
 
 
 
