@@ -38,7 +38,7 @@ class _MyAppState extends State<appGPS> {
                   child: new Column(
                     children: <Widget>[
                       new Padding(child: new Card(child: new Text(
-                        "Qualité de l'air en temps réel",
+                        "Qualitï¿½ de l'air en temps rï¿½el",
                         style: new TextStyle(fontSize: 32, color: Colors.white),),
                         color: Colors.black26,), padding: EdgeInsets.all(0.0),),
                       Padding(padding: EdgeInsets.only(top: 20.0)),
@@ -50,15 +50,15 @@ class _MyAppState extends State<appGPS> {
                             color: Colors.black54,
                             fontWeight: FontWeight.bold),),
                       Padding(padding: EdgeInsets.only(top: 20.0)),
-                      new Text("Autoriser a ClainAir a acceder a vos données",
+                      new Text("Autoriser a ClainAir a acceder a vos donnï¿½es",
                         textAlign: TextAlign.center,
                         style: new TextStyle(
                           fontSize: 17, color: Colors.black54,),),
-                      new Text("d'emplacement afin de reçevoir des informations",
+                      new Text("d'emplacement afin de reï¿½evoir des informations",
                         textAlign: TextAlign.center,
                         style: new TextStyle(
                           fontSize: 17, color: Colors.black54,),),
-                      new Text("plus adaptées sur la qualité de l'air",
+                      new Text("plus adaptï¿½es sur la qualitï¿½ de l'air",
                         textAlign: TextAlign.center,
                         style: new TextStyle(
                           fontSize: 17, color: Colors.black54,),),

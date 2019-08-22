@@ -1,4 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:projet_1cs/screens/home/content.dart';
+import 'package:projet_1cs/screens/home/navigation_bar.dart';
+
+class Home extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new Scaffold(
+        body: Center(
+          child: Content(),
+        ),
+        bottomNavigationBar: Navigation_bar(),
+      );
+  }
+}
+
+/***************************************************** */
+/*import 'package:flutter/material.dart';
 void main() => runApp(new MyApp());
 
 
@@ -236,3 +254,4 @@ class Navigation_bar extends StatelessWidget{
 
 }
 
+*/
