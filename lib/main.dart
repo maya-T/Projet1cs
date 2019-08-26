@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
           leading: new IconButton(icon: new Icon(Icons.send),iconSize: 35, color: Colors.white, onPressed: () => {},),
           actions: <Widget>[
-            new IconButton( icon: new Icon(Icons.settings),iconSize: 35, color: Colors.white, onPressed: () => {}, ),
+            new IconButton( icon: new Icon(Icons.settings),iconSize: 35, color: Colors.white, onPressed: () => {},),
            ],
         ),
         body: Home(),
