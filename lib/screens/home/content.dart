@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projet_1cs/screens/home/volet.dart';
-import 'package:projet_1cs/gps/appGPS.dart';
+import 'package:projet_1cs/screens/gps/appGPS.dart';
 import 'package:projet_1cs/screens/formulaire/formulaire.dart';
 
 class Content extends StatelessWidget{
