@@ -68,7 +68,7 @@ class _MyAppState extends State<Prediction> {
           width: double.infinity,
           decoration: BoxDecoration(
               color: Color(0xffafb7c2),
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(0.0),
               boxShadow: [
                 BoxShadow(
                     color: Colors.black12,
@@ -255,21 +255,6 @@ class _MyAppState extends State<Prediction> {
                 ),
               ),
             ),
-           /* Padding( // bookmark
-              padding: const EdgeInsets.only(top: 8.0,left: 240, bottom: 20.0),
-              child: Container(
-                height: 40.0,
-                width: 45,
-                decoration: BoxDecoration(
-                  color: Color(0xff2ac6dc),
-                  borderRadius: BorderRadius.circular(20.0),
-
-                ),
-                child: Center(
-                  child: Icon(Icons.turned_in,color: Colors.white,)
-                ),
-              ),
-            ),*/
           ],
         ),
       ]),

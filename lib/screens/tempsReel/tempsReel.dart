@@ -66,7 +66,7 @@ class _MyAppState extends State<TempsReel> {
             width: double.infinity,
             decoration: BoxDecoration(
                 color: Color(0xffafb7c2),
-                borderRadius: BorderRadius.circular(5.0),
+                borderRadius: BorderRadius.circular(0.0),
                 boxShadow: [
                   BoxShadow(
                       color: Colors.black12,
@@ -162,8 +162,8 @@ class _MyAppState extends State<TempsReel> {
                 child: Row(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(left: 75.0),
-                      child: Container(
+                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                     child: Container(
                         child: Column( // PM2.5
                         children: <Widget>[
                           Padding( // PM2.5
@@ -226,7 +226,7 @@ class _MyAppState extends State<TempsReel> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Indice de la qualité de l'Air",
+                "Indice de la qualité de l'air",
                 style: TextStyle(
                   fontFamily: "RobotoSlab",
                   fontStyle: FontStyle.italic,
@@ -237,7 +237,7 @@ class _MyAppState extends State<TempsReel> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 8.0),
+                padding: const EdgeInsets.only(top: 8.0, bottom: 20.0),
                 child: Container(
                   height: 40.0,
                   width: 60,

@@ -3,10 +3,10 @@ import 'package:overlay_support/overlay_support.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 
-class appGPS extends StatefulWidget { @override
+class AppGPS extends StatefulWidget { @override
 _MyAppState createState() => _MyAppState();}
 
-class _MyAppState extends State<appGPS> {
+class _MyAppState extends State<AppGPS> {
   bool enabled  ;
   void getStateofgps() async {
     ServiceStatus serviceStatus = await PermissionHandler().checkServiceStatus(PermissionGroup.location);
