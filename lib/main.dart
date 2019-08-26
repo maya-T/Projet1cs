@@ -17,8 +17,11 @@ class MyApp extends StatelessWidget {
           title: new Text('CleanAir',
             style: TextStyle( fontWeight: FontWeight.bold,fontSize: 24),
       ),
-          leading: new IconButton(icon: new Icon(Icons.send),iconSize: 35, color: Colors.white, onPressed: () => {},),
-          actions: <Widget>[
+          leading: Icon(
+          Icons.send,
+          textDirection: TextDirection.rtl,
+        ),
+        actions: <Widget>[
             new IconButton( icon: new Icon(Icons.settings),iconSize: 35, color: Colors.white, onPressed: () => {},),
            ],
         ),
