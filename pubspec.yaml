@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  cloud_firestore: ^0.12.9
   permission_handler: ^3.2.1+1
   overlay_support: ^1.0.0
   flutter:
