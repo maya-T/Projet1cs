@@ -4,6 +4,7 @@ import 'data.dart';
 import 'package:gradient_text/gradient_text.dart';
 import 'page_Indicator.dart';
 import 'information.dart';
+import 'package:projet_1cs/screens/contribution/contribution.dart';
 
 class Formulaire extends StatefulWidget {
   @override
@@ -36,6 +37,7 @@ class _MyAppState extends State<Formulaire>  with TickerProviderStateMixin{
 
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar:  new AppBar(
           backgroundColor: Color.fromRGBO(66, 76, 88, 1),
           title: new Text('CleanAir',
@@ -307,6 +309,9 @@ class _MyAppState extends State<Formulaire>  with TickerProviderStateMixin{
                           if(oneOrMoreEmpty) oneOrMoreEmpty=false;
                           allFilled=true;
                         }
+                        Navigator.push(
+                             context, 
+                            MaterialPageRoute(builder: (context) => Contribution()));
                       });
 
                     },
