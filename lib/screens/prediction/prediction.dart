@@ -8,15 +8,11 @@ import 'dart:math';
 import 'package:intl/intl.dart';
 
 class Prediction extends StatefulWidget {
-  Future<DateTime> date;
-  Prediction(this.date);
   @override
-  _MyAppState createState() => _MyAppState(date);
+  _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<Prediction> {
-  Future<DateTime> _date;
-  _MyAppState(this._date);
   @override
   Widget build(BuildContext context) {
     var width_=MediaQuery.of(context).size.width;
@@ -112,16 +108,6 @@ class _MyAppState extends State<Prediction> {
           height: height_/2,
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(left:200.0),
-                child: Text( _date.toString(),
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: "Roboto",
-                      fontStyle: FontStyle.italic,
-                      color: Colors.white),
-                ),
-              ),
               Text(
                 "Pourcentage des gaz polluants",
                 style: TextStyle(

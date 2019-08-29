@@ -94,7 +94,7 @@ class _DatePickState extends State<DatePick> {
         onPressed: (){
           Navigator.push(
             context, 
-            MaterialPageRoute(builder: (context) => Prediction(dateFutur)));                
+            MaterialPageRoute(builder: (context) => Prediction()));                
         },
         child: Icon(Icons.check,color: Color(0xff2ac6dc),),
         tooltip: dateFutur.toString(),
