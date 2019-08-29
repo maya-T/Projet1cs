@@ -21,92 +21,118 @@ class _MyAppState extends State<AppGPS> {
             home: new Scaffold(
 
               appBar: new AppBar(
-                backgroundColor: Colors.black54,
-                leading: new Icon(
-                  Icons.keyboard_return, color: Colors.white, size: 30,),
-                title: new Text("ClainAir",
-                    style: new TextStyle(fontSize: 30, color: Colors.white)),
-                actions: <Widget>[
-                  new Icon(Icons.settings)
-                ],
-
-              ),
+          backgroundColor: Color.fromRGBO(66, 76, 88, 1),
+          title: new Text('CleanAir',
+            style: TextStyle( fontWeight: FontWeight.bold,fontSize: 24),
+      ),
+          leading: Icon(
+          Icons.send,
+          textDirection: TextDirection.rtl,
+        ),
+        actions: <Widget>[
+            new IconButton( icon: new Icon(Icons.settings),iconSize: 35, color: Colors.white, onPressed: () => {},),
+           ],
+        ),
 
 
               body: new SingleChildScrollView(
                 child: new Center(
                   child: new Column(
                     children: <Widget>[
-                      new Padding(child: new Card(child: new Text(
-                        "Qualit� de l'air en temps r�el",
-                        style: new TextStyle(fontSize: 32, color: Colors.white),),
-                        color: Colors.black26,), padding: EdgeInsets.all(0.0),),
-                      Padding(padding: EdgeInsets.only(top: 20.0)),
+                      new Container(
+                        height: 45.0,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            color: Color(0xffafb7c2),
+                            borderRadius: BorderRadius.circular(0.0),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black12,
+                                  offset: Offset(0.0, 12.0),
+                                  blurRadius: 12.0),
+                              BoxShadow(
+                                color: Colors.black12,
+                                offset: Offset(0.0, 10.0),
+                                blurRadius: 10.0,
+                              )
+                            ]),
+                        child: Center(
+                          child: Text(
+                            "Qualité de l'air en temps réel",
+                            style: TextStyle(
+                              fontFamily: "RobotoSlab",
+                              fontSize: 20.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.only(top: 15.0)),
                       new Padding(child: new Icon(
-                        Icons.gps_fixed, color: Colors.orange, size: 220,),
+                        Icons.gps_fixed, color: Color.fromRGBO(246, 142, 79,1), size: 125,),
                         padding: EdgeInsets.all(12.0),),
                       new Text("Utiliser le GPS", textAlign: TextAlign.center,
                         style: new TextStyle(fontSize: 30,
-                            color: Colors.black54,
-                            fontWeight: FontWeight.bold),),
-                      Padding(padding: EdgeInsets.only(top: 20.0)),
-                      new Text("Autoriser a ClainAir a acceder a vos donn�es",
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(
-                          fontSize: 17, color: Colors.black54,),),
-                      new Text("d'emplacement afin de re�evoir des informations",
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(
-                          fontSize: 17, color: Colors.black54,),),
-                      new Text("plus adapt�es sur la qualit� de l'air",
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(
-                          fontSize: 17, color: Colors.black54,),),
-                      Padding(padding: EdgeInsets.only(top: 10.0)),
-                      new Icon(Icons.local_offer, size: 25, color: Colors.white),
+                            color: Color.fromRGBO(66, 76, 88, 1),
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Roboto"),
+                            ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 20.0)),
+                        new Text("Autoriser a ClainAir a acceder a vos données d'emplacement afin de reçevoir des informations plus adaptées sur la qualité de l'air",
+                          textAlign: TextAlign.center,
+                          style: new TextStyle(
+                            fontSize: 16, 
+                            color:  Color.fromRGBO(66, 76, 88, 0.8),
+                            fontFamily: "Roboto",
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 20.0)),
+                        new FlatButton.icon(onPressed: (){getStateofgps();
+                        if(enabled) {
+                          // naviguer a la page de statistique
 
-                      new FlatButton.icon(onPressed: (){getStateofgps();
-                      if(enabled) {}// naviguer a la page de statistique
-                        else {
-                        showOverlayNotification((context) {
-                          return Card(
-                            margin: const EdgeInsets.symmetric(horizontal: 4),
-                            child: SafeArea(
-                              child: new Center(
-                                child: ListTile(
-                             /*   leading: SizedBox.fromSize(
-                                      size: const Size(60, 60),
-                                      child: ClipOval(
-                                          child: Container(
-                                            color: Colors.black,
-                                          ))), */
-                                  title: new Icon(Icons.gps_off,color : Colors.orange,size:30),
-                                  subtitle: Text('Veuillez activer le service de localisation',style: new TextStyle(fontSize: 15),),
-                                  trailing: IconButton(
-                                      icon: Icon(Icons.close),
-                                      onPressed: () {
-                                        OverlaySupportEntry.of(context).dismiss();
-                                      }),
+                        }
+                          else {
+                          showOverlayNotification((context) {
+                            return Card(
+                              margin: const EdgeInsets.symmetric(horizontal: 4),
+                              child: SafeArea(
+                                child: new Center(
+                                  child: ListTile(
+                                    title: new Icon(Icons.gps_off,color : Color.fromRGBO(246, 142, 79,1),size:30),
+                                    subtitle: Text('Veuillez activer le service de localisation',style: new TextStyle(fontSize: 15),),
+                                    trailing: IconButton(
+                                        icon: Icon(Icons.close),
+                                        onPressed: () {
+                                          OverlaySupportEntry.of(context).dismiss();
+                                        }),
+                                  ),
                                 ),
                               ),
-                            ),
-                          );
-                        }, duration: Duration(milliseconds: 4000));
-                      }
+                            );
+                          }, duration: Duration(milliseconds: 4000));
+                        }
 
-                      },
-                        color: Colors.orange,
-                        icon: new Icon(
-                            Icons.local_offer, size: 25, color: Colors.white),
-                        label: new Text("Ma position actuelle",
-                            style: new TextStyle(fontSize: 25,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold)),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(30.0)),),
-                      new RaisedButton(onPressed: () {},
+                    },
+                      color: Color.fromRGBO(246, 142, 79,1),
+                      icon: new Icon(
+                          Icons.map, size: 22, color: Colors.white),
+                      label: new Text("Ma position actuelle",
+                          style: new TextStyle(fontSize: 22,
+                              color: Colors.white,
+                              fontFamily: "Roboto")),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(30.0)),),
+                        new RaisedButton(onPressed: () {},
                         child: new Text("Choisir un emplacement",
-                          style: new TextStyle(fontSize: 25),),
+                          style: new TextStyle(
+                              fontSize: 22,
+                              fontStyle: FontStyle.normal,
+                              color: Color.fromRGBO(66, 76, 88, 0.8),
+                              fontFamily: "Roboto"),),
                         shape: RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(30.0)),
                         color: Colors.white,
