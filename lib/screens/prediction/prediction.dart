@@ -8,14 +8,17 @@ import 'dart:math';
 import 'package:intl/intl.dart';
 
 class Prediction extends StatefulWidget {
+  Future<DateTime> date;
+  Prediction(this.date);
   @override
-  _MyAppState createState() => _MyAppState();
+  _MyAppState createState() => _MyAppState(date);
 }
 
 class _MyAppState extends State<Prediction> {
+  Future<DateTime> _date;
+  _MyAppState(this._date);
   @override
   Widget build(BuildContext context) {
-
     var width_=MediaQuery.of(context).size.width;
     var height_=MediaQuery.of(context).size.height;
     var rnd = new Random();
@@ -111,9 +114,7 @@ class _MyAppState extends State<Prediction> {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(left:200.0),
-                child: Text( 
-                  // TODO: the date here should be the date selected in the select date page and not today 
-                  now.day.toString()+"/"+now.month.toString()+"/"+ now.year.toString(),
+                child: Text( _date.toString(),
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Roboto",
