@@ -152,11 +152,12 @@ class _MyAppState extends State<Contribution> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Padding (
-                      padding: const EdgeInsets.only(left: 75.0),
+                      padding: const EdgeInsets.only(left: 0.0),
                       child: Container(
-                        child: Column(
+                        child: Row(
                           children: <Widget>[
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -191,7 +192,7 @@ class _MyAppState extends State<Contribution> {
                         ),
                       ),
                     ),
-                    Container(
+                            Container(
                       child: Column( // PM10
                         children: <Widget>[
                         Padding( // PM10
@@ -220,25 +221,29 @@ class _MyAppState extends State<Contribution> {
                             left: BorderSide(color: Color(0xff31c3b6), width: 10)),
                       ),
                     ),
-                        
-                  ],
+                   ],     
+                  
                 ),
+              
               ),
-                    ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30.0),
+              ),
+              ],
+              ),
+              ),
+              Padding( // Comment reduire ces chiffres?!
+                padding: const EdgeInsets.only(top: 30.0, bottom: 30.0),
                 child: Container(
                   height: 50.0,
-
-                  width: 235,
+                  width: width_/1.5,
                   decoration: BoxDecoration(
                     color: Color(0xfff68e4f),
-                    borderRadius: BorderRadius.circular(20.0),
+                    borderRadius: BorderRadius.circular(50.0),
 
                   ),
                   child: Center(
-                    child: Text("Comment reduire ces chiffres ?!",style:TextStyle(
-                      fontSize: 15,
+                    child: Text("Comment reduire ces chiffres?!", textAlign: TextAlign.center,style:TextStyle(
+                      fontSize: 16,
+                      fontFamily: "Roboto",
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
@@ -246,12 +251,12 @@ class _MyAppState extends State<Contribution> {
                   ),
                 ),
               ),
-                    ],
-          ),
-              )
+             
+          
+          
               ]
               ),
-        ]
+        ],
         ),
     ),
     );
