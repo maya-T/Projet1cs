@@ -111,7 +111,7 @@ class _MyAppState extends State<Contribution> {
                 Padding(
                   padding: const EdgeInsets.only(top: 15.0),
                   child: Text(
-                    "Gaz toxique produit en un an",
+                    "Gaz toxiques produits en un an",
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 18,

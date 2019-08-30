@@ -50,7 +50,6 @@ class Volet extends StatelessWidget{
                 child: new IconButton(
                     icon:icon_name,
                     padding: new EdgeInsets.all(0.0),
-                    color:Color.fromRGBO(255, 255, 255, 1),
                     iconSize: 40,
                     onPressed: () {
                       Navigator.push(
